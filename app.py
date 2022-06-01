@@ -7,9 +7,8 @@ import datetime
 
 app = Flask(__name__,template_folder='template')
 # app.config['SQLALCHEMY_DATABASE_URI'] =  'sqlite:///drm1.sqlite3'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://umnuemfyetsddc:9ebe3d74629181a0c9cd043f9d43b2c1de5bdcb761f4bf70995da68baeeb7e81@ec2-44-194-117-205.compute-1.amazonaws.com:5432/df2k026p3ii07s'
-# app.config['SQLALCHEMY_DATABASE_URI'] =  'sqlite:///mark1.sqlite3'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://umnuemfyetsddc:9ebe3d74629181a0c9cd043f9d43b2c1de5bdcb761f4bf70995da68baeeb7e81@ec2-44-194-117-205.compute-1.amazonaws.com:5432/df2k026p3ii07s'
+app.config['SQLALCHEMY_DATABASE_URI']= 'postgres://tovclgputfldjg:0bd23a1b03afefb6e11a265e2278ea00e2b8955621e4237d7ddd1b95fc077135@ec2-52-204-195-41.compute-1.amazonaws.com:5432/daqrqthu98nhbv'
+app.config['SQLALCHEMY_DATABASE_URI'] =  'sqlite:///mark1.sqlite3'
 app.permanent_session_lifetime = timedelta(minutes=2)
 db = SQLAlchemy(app)
 app.secret_key='admin123'
