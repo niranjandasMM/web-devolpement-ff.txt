@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Create_DRM</title>
+
+    <head>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    </head>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="semantic/dist/semantic.min.js"></script>
+    <div class="ui bottom attached segment pushable">
+        <div class="ui visible inverted left vertical sidebar menu">
+            <a class="item" href="/drm">
+                <i class="home icon"></i>
+                DRM-Home
+            </a>
+            <a class="item" href="/create_view">
+                <i class="block layout icon"></i>
+                View Your Goals
+            </a>
+        </div>
+        <div class="pusher">
+            <div class="ui basic segment">
+                <h1>new goals creating area</h1>
+
+                <form action="/create_add" method="post">
+                    <div class="ui form">
+                        <div class="field">
+                            <label>Your Goal</label>
+                            <textarea rows="2" name="goal"></textarea>
+                        </div>
+                        <div class="field">
+                            <label>Details</label>
+                            <textarea rows="2" name="goal_desc"></textarea>
+                        </div>
+                        <div class="field">
+                            <label>When did you offically started</label>
+                            <textarea rows="2" name="when_you_offically_started"></textarea>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="ui form">
+                        <div class="inline fields">
+                            <label>In which DRM Department this comes under?</label>
+                            <div class="field">
+                                <div class="ui radio checkbox">
+                                    <input type="radio" value="mindest" name="category">
+                                    <label>Mindest</label>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="ui radio checkbox">
+                                    <input type="radio" value="physical" name="category">
+                                    <label>Physical</label>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="ui radio checkbox">
+                                    <input type="radio" value="social" name="category">
+                                    <label>Social</label>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="ui radio checkbox">
+                                    <input type="radio" value="skills" name="category">
+                                    <label>Skills</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <button type="submit" class="ui inverted violet button">Create My Goal</button>
+                    </div>
+                </form>
+                <br>
+                <a href="/drm"><button class="ui inverted red button">Discard</button> </a>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

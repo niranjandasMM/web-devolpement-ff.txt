@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title> CREATE EDIT page</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">SDRIA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/add">Add New Thoughts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/view">Your Thoughts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/drm">DRM</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class='row'>
+        <div class='col-5 mx-auto'>
+            <h3>Edit Goals</h3>
+            <hr>
+            <form method='post' action='{{url_for("create_edit",id=rows.id)}}'>
+                <div class='form-group'>
+                    <label>goal</label>
+                    <input type='text' name='goal' required class='form-control' value='{{rows.goal}}'>
+                </div>
+                <div class='form-group'>
+                    <label>Details</label>
+                    <input type='text' name='goal_desc' required class='form-control' value='{{rows.goal_desc}}'>
+                </div>
+                <div class='form-group'>
+                    <label>When did you Started</label>
+                    <input type='text' name='when_you_offically_started' required class='form-control'
+                        value='{{rows.when_you_offically_started}}'>
+                </div>
+                <div class='form-group'>
+                    <label>Mistakes/Learnings</label>
+                    <input type='text' name='learnings' required class='form-control' value='{{rows.learnings}}'>
+                </div>
+                <div class='form-group'>
+                    <label>How its going</label>
+                    <input type='text' name='improvement' required class='form-control' value='{{rows.improvement}}'>
+                </div>
+                <div class="ui form">
+                    <div class="inline fields">
+                        <label>In which DRM Department this comes under?</label>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" value="mindest" name="category">
+                                <label>Mindest</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" value="physical" name="category">
+                                <label>Physical</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" value="social" name="category">
+                                <label>Social</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" value="skills" name="category">
+                                <label>Skills</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <input type='submit' value='Submit' class='btn btn-primary'>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.js"></script>
+    <title>Create_view page</title>
+</head>
+
+<body>
+    <div class="ui massive  breadcrumb">
+        <a class="section" href="/">Home</a>
+        <i class="right chevron icon divider"></i>
+        <a class="section" href="/drm" >DRM</a>
+        <i class="right chevron icon divider"></i>
+        <div class="active section">Your Goals</div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="semantic/dist/semantic.min.js"></script>
+    <h1>DRM // RESULTS GOALS Page</h1>
+    <br>
+    <table class="ui fixed inverted  table">
+        <thead>
+            <tr>
+                <th>Goals</th>
+                <th>Details</th>
+                <th>Recorded Time in the Books</th>
+                <th>When did you you planned</th>
+                <th>Category</th>
+                <th>Mistakes/Learnings</th>
+                <th>How its Going</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        {% for row in values %}
+        <tbody>
+            <tr>
+                <td>{{row["goal"]}}</td>
+                <td>{{row["goal_desc"]}}</td>
+                <td>{{row["Time_of_record"]}}</td>
+                <td>{{row["when_you_offically_started"]}}</td>
+                <td>{{row["category"]}}</td>
+                <td>{{row["learnings"]}}</td>
+                <td>{{row["improvement"]}}</td>
+                <td><a href='{{url_for("create_edit",id=row.id)}}' class='btn btn-primary'>Edit</a></td>
+                <td><a href='{{url_for("create_delete",id=row.id)}}' class='btn btn-danger'
+                        onclick='confirm("Are You Sure")'>Delete</a></td>
+            </tr>
+        </tbody>
+        {% endfor %}
+    </table>
+
+
+    <a href="/">Go back to home page</a>
+
+
+</body>
+
+</html>

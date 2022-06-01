@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.js"></script>
+    <title>DRM_page</title>
+
+</head>
+
+<body>
+    <div class="ui large top fixed hidden menu">
+        <div class="ui container">
+            <a class="active item" href="/">Home</a>
+            <a class="item" href="/create_view">View Your Goals</a>
+            <a class="item" href="/create">Create New Goals</a>
+        </div>
+    </div>
+    <br>
+    <br>
+    <h1>DRM(Defence Resource Mangement)</h1>
+    <a class="nav-link" href="/create"><button class="ui teal button">Create New Goals</button></a>
+    <a class="nav-link" href="/create_view"><button class="ui blue button">View Your Goals</button></a>
+    <h2>Your all Goals</h2>
+
+
+    <!-- <div class="ui four cards">
+        {% for row in rows %}
+        <div class="card">
+            <div class="image">
+                <img src="https://wallpaperaccess.com/full/526285.jpg">
+            </div>
+            <div class="content">
+                <div class="header">{{row["goal"]}}</div>
+            </div>
+            <div class="extra content">
+                <span class="right floated">
+                    {{row["Time_of_record"]}}
+                </span>
+                <span>
+                    <i class="user icon"></i>
+                    {{row["category"]}}
+                </span>
+            </div>
+        </div>
+        {%endfor%}
+    </div> -->
+    <div class="ui special cards">
+        {% for row in values %}
+        <div class="card">
+            <div class="blurring dimmable image">
+                <div class="ui dimmer">
+                    <div class="content">
+                        <div class="center">
+                            <a href='{{url_for("create_view")}}'>
+                                <div class="ui inverted button">View Goal</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <img src="static/images/iron_bg.jpg">
+            </div>
+            <div class="content">
+                <a class="header">{{row["goal"]}}</a>
+                <div class="meta">
+                    <span class="date">Created in {{row["Time_of_record"]}}</span>
+                </div>
+            </div>
+            <div class="extra content">
+                <a>
+                    <i class="users icon"></i>
+                    {{row["category"]}}
+                </a>
+            </div>
+        </div>
+        {%endfor%}
+    </div>
+
+    <script>
+        $('.special.cards .image').dimmer({
+            on: 'hover'
+        });
+    </script>
+
+
+
+</body>
+
+</html>

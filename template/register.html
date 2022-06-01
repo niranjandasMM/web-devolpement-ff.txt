@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.js"></script>
+    <title>Register</title>
+
+</head>
+
+<body>
+    <div class="ui positive message">
+        <div class="header">
+            {{msg}}
+        </div>
+    </div>
+    <form action="/register" method="post">
+        <div class="ui form">
+            <div class="required field">
+                <label>Username</label>
+                <input type="text" name='username' placeholder="create a username">
+            </div>
+            <div>
+                <label>Password</label>
+                <input type="password" name='password' placeholder="create a password">
+            </div>
+            <div>
+                <button type="submit">Register</button>
+            </div>
+        </div>
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.js"></script>
+    <title>Log on</title>
+
+</head>
+
+<body>
+    <h1>Welcome to Login Page !</h1>
+    <br>
+    <div class="ui negative message">
+        <i class="close icon"></i>
+        <div class="header">
+            {{msg}}
+        </div>
+    </div>
+
+    <form action="/login" method="post">
+        <div class="ui inverted segment">
+            <div class="ui inverted form">
+                <div class="two fields">
+                    <div class="field">
+                        <label>Username</label>
+                        <input placeholder="First Name" name='username' type="text">
+                    </div>
+                    <div class="field">
+                        <label>Password</label>
+                        <input placeholder="Last Name" name='password' type="text">
+                    </div>
+                </div>
+                <div class="inline field">
+                    <label>Read the terms carefully, maybe we are asking for your first borne! </label>
+                </div>
+                <button type="submit" class="ui inverted violet button">Login</button>
+            </div>
+        </div>
+    </form>
+    <br>
+    <a href="/register"><button class="ui inverted red button">Register</button> </a>
+
+</body>
+
+</html>
